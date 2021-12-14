@@ -1,4 +1,5 @@
 import models.Hero;
+import models.Squad;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -62,6 +63,12 @@ public class HeroTest {
         assertNotEquals(formerAge, hero.getAge());
         assertNotEquals(formerSpecialPower, hero.getSpecialPower());
         assertNotEquals(formerWeakness, hero.getWeakness());
+    }
+    @Test
+    public void squad_correctlyInstantiatesSquadObject(){
+        Hero eric = setUpNewHero();
+        Squad avengers = setUpNewSquad();
+        assertEquals(true, avengers instanceof Squad);
     }
 
 
