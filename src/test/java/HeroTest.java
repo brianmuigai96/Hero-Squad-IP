@@ -70,6 +70,24 @@ public class HeroTest {
         Squad avengers = setUpNewSquad();
         assertEquals(true, avengers instanceof Squad);
     }
+    @Test
+    public void squad_ensuresHeroChoosesASquad(){
+        Hero eric = setUpNewHero();
+        Squad avengers = setUpNewSquad();
+        boolean exists = false;
+        for(Hero hero: avengers.getHeroes()){
+            if (avengers.doesHeroExist(eric)){
+                System.out.println(hero + "exists");
+                exists = true;
+            }
+        }
+
+        if(!exists){
+            avengers.getHeroes().add(eric);
+        }
+
+        assertEquals(eric, avengers.getHeroes().get(0));
+    }
 
 
 }
