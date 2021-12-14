@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class HeroTest {
 //    check to see if an object is correctly created
@@ -41,5 +42,27 @@ public class HeroTest {
         assertEquals(1, Hero.getAll().size());
         assertEquals(Hero.getAll().get(0).getId(), 2);
     }
+    @Test
+    public void updateChangesHeroContent() throws Exception {
+        Hero hero = setUpNewHero();
+
+        int formerId = hero.getId();
+        String formerName = hero.getName();
+        int formerAge = hero.getAge();
+        String formerSpecialPower = hero.getSpecialPower();
+        String formerWeakness = hero.getWeakness();
+
+        hero.setName("Wonder woman");
+        hero.setAge(20);
+        hero.setSpecialPower("Fly");
+        hero.setWeakness("sleep");
+
+        assertEquals(formerId, hero.getId());
+        assertNotEquals(formerName, hero.getName());
+        assertNotEquals(formerAge, hero.getAge());
+        assertNotEquals(formerSpecialPower, hero.getSpecialPower());
+        assertNotEquals(formerWeakness, hero.getWeakness());
+    }
+
 
 }
