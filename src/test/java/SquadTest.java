@@ -62,6 +62,13 @@ public class SquadTest {
         Squad avengers = new Squad("Avengers", "Defeat Spartans");
         assertEquals(false, avengers.getPublished());
     }
+    @Test
+    public void getId_squadInstantiatesWithAnID_1() throws Exception {
+        Squad.clearAllPosts();
+        Squad avengers = new Squad("Avengers", "Defeat Spartans");
+        Squad justiceLeague = new Squad("Justice League", "Fight Crime");
+        assertEquals(2, Squad.findById(justiceLeague.getId()).getId());
+    }
 
 
 }
