@@ -2,6 +2,8 @@ import models.Hero;
 import models.Squad;
 import org.junit.Test;
 
+import java.time.LocalDateTime;
+
 import static org.junit.Assert.assertEquals;
 
 public class SquadTest {
@@ -68,6 +70,11 @@ public class SquadTest {
         Squad avengers = new Squad("Avengers", "Defeat Spartans");
         Squad justiceLeague = new Squad("Justice League", "Fight Crime");
         assertEquals(2, Squad.findById(justiceLeague.getId()).getId());
+    }
+    @Test
+    public void getCreatedAt_instantiatesWithCurrentTime_today() throws Exception{
+        Squad avengers = new Squad("Avengers", "Defeat Spartans");
+        assertEquals(LocalDateTime.now().getDayOfWeek(), avengers.getCreatedAt().getDayOfWeek());
     }
 
 
