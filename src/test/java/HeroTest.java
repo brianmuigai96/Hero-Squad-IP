@@ -24,9 +24,22 @@ public class HeroTest {
     }
     @Test
     public void getId_heroInstantiatesWithAnID_1() throws Exception {
-        Hero superHero = new Hero("Brian", 26, "Super Coder", "My Patience", "ForexTraders");
-        Hero secondSuperHero = new Hero("Trees", 21, "Super Wifie", "Patience", "Lawyers");
+        Hero superHero = new Hero("Brian", 26, "Super Coder", "My Patience", "master");
+        Hero secondSuperHero = new Hero("Trees", 21, "Punch", "Patience", "DC");
         assertEquals(2, Hero.findById(secondSuperHero.getId()).getId());
+    }
+    @Test
+    public void getPublished_isFalseAfterInstantiation_false() {
+        Hero eric = new Hero("Brian", 26, "Super Coder", "My Patience", "master");
+        assertEquals(false, eric.getPublished());
+    }
+    @Test
+    public void delete_deleteASpecificHero() throws Exception{
+        Hero eric = setUpNewHero();
+        Hero catherine= new Hero("Catherine", 20, "Super ", "Patience", "Dc");
+        eric.deleteHero();
+        assertEquals(1, Hero.getAll().size());
+        assertEquals(Hero.getAll().get(0).getId(), 2);
     }
 
 }
