@@ -88,6 +88,13 @@ public class HeroTest {
 
         assertEquals(eric, avengers.getHeroes().get(0));
     }
+    private Hero setUpNewHero(){
+        return new Hero("Ruto", 26, "Super Coder", "My Patience", "Air bending");
+    }
+
+    private Squad setUpNewSquad(){
+        return new Squad("Avengers", "Defeat Thanos");
+    }
 
 
 }
