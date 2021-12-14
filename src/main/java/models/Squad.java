@@ -51,6 +51,45 @@ public class Squad {
 
         return counter != 1;
     }
+    public String getName(){
+        return this.mName;
+    }
+
+    public String getCause(){
+        return this.mCause;
+    }
+
+    public static ArrayList<Squad> getAll(){
+        return mInstances;
+    }
+
+    public boolean checkForMaximumMembers(){
+        return mHeroes.size() <= this.mMaxSize;
+    }
+
+    public void setName(String name){
+        this.mName = name;
+    }
+
+    public void setCause(String cause){
+        this.mCause = cause;
+    }
+
+    public static void clearAllPosts(){
+        mInstances.clear();
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public static Squad findById(int id){
+        return mInstances.get(id - 1);
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
 
 
 }
