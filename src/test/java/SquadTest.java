@@ -45,6 +45,18 @@ public class SquadTest {
 //        avengers.setHeroes(goliath);
         assertEquals(true, avengers.checkForMaximumMembers());
     }
+    @Test
+    public void checksIfHeroAppearsInOnlyOneSquadAtATime_true() {
+        Hero eric = new Hero("Eric", 26, "Super Coder", "Patience", "ForexTrader");
+        Hero brian = new Hero("Brian", 27, "Pilot", "Never broke", "Wings");
+
+        Squad avengers = new Squad("Avengers", "Defeat Spartans");
+        Squad justiceLeague = new Squad("Justice League", "Fight Crime");
+        avengers.setHeroes(eric);
+        justiceLeague.setHeroes(eric);
+        avengers.setHeroes(brian);
+        assertEquals(false, avengers.doesHeroExist(brian));
+    }
 
 
 }
