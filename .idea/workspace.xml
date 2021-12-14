@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20ece532-3482-4d10-8dee-8732db70335d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
