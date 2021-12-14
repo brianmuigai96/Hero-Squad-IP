@@ -16,4 +16,14 @@ public class Squad {
     private static ArrayList<Hero> mHeroes = new ArrayList<Hero>();
     private List<Hero> squadHeroes = new ArrayList<>();
 
+    public Squad(String name, String cause) {
+        this.mName = name;
+        this.mCause = cause;
+        this.mMaxSize = 5;
+        this.createdAt = LocalDateTime.now();
+        this.mPublished = false;
+        mInstances.add(this);
+        this.id = mInstances.size();
+    }
+
 }
