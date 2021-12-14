@@ -25,5 +25,21 @@ public class Squad {
         mInstances.add(this);
         this.id = mInstances.size();
     }
+    public List<Hero> getSquadHeroes(){
+        return this.squadHeroes;
+    }
+
+    public List<Hero> getHeroes(){
+        return mHeroes;
+    }
+
+    public void setHeroes(Hero hero){
+        mHeroes.add(hero);
+    }
+
+    public boolean getPublished(){
+        return this.mPublished;
+    }
+
 
 }
