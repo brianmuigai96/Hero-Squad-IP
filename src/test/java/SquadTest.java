@@ -18,5 +18,14 @@ public class SquadTest {
         squad.getHeroes().add(hero);
         assertEquals(hero, squad.getHeroes().get(0));
     }
+    @Test
+    public void checksIfSquadCanAddHeroes_true() {
+        Hero eric = new Hero("Eric", 26, "Super Coder", "Patience", "ForexTrader");
+        Hero brian = new Hero("Brian", 27, "Pilot", "Never broke", "Wings");
+        Squad avengers = new Squad("Avengers", "Defeat Spartans");
+        avengers.setHeroes(eric);
+        avengers.setHeroes(brian);
+        assertEquals(true, avengers.getHeroes().contains(eric));
+    }
 
 }
