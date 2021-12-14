@@ -41,5 +41,16 @@ public class Squad {
         return this.mPublished;
     }
 
+    public boolean doesHeroExist(Hero hero){
+        int counter = 0;
+        for (Hero mHero : mHeroes) {
+            if (mHero.getName().equals(hero.getName())) {
+                counter++;
+            }
+        }
+
+        return counter != 1;
+    }
+
 
 }
