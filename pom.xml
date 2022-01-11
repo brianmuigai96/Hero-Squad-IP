@@ -92,7 +92,7 @@
                     <!-- Change this to YOUR application name! -->
                     <appName>herosquadteam</appName>
                     <processTypes>
-                        <web>java -jar target/track-wildlife2021-1.0-jar-with-dependencies.jar</web>
+                        <web>java -jar target/Hero-Squad-IP-1.0-jar-with-dependencies.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
